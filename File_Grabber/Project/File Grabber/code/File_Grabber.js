@@ -13,8 +13,6 @@ let whitelist;
 let copyList = [];
 let operating_system = os.platform
 
-maxAPI.post("OS is " + operating_system);
-
 // Reads dir, returns array of files
 const readDir = function(filePath) {
     let files = fs.readdirSync(filePath);
@@ -85,6 +83,7 @@ maxAPI.addHandlers({
     // Choose source folder, and format
     source: (msg) => {
         source_directory = sdf(msg);
+        maxAPI.post("OS is " + operating_system);
         maxAPI.post("Source directory is " + source_directory);        
     },
     // Choose output directory, and format
