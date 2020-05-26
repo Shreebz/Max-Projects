@@ -738,29 +738,6 @@
 			}
 , 			{
 				"box" : 				{
-					"bubblesize" : 30,
-					"fontsize" : 18.0,
-					"id" : "obj-94",
-					"maxclass" : "preset",
-					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "preset", "int", "preset", "int" ],
-					"patching_rect" : [ 228.5, 880.732421875, 140.157913208007812, 106.53509521484375 ],
-					"preset_data" : [ 						{
-							"number" : 1,
-							"data" : [ 5, "obj-63", "toggle", "int", 1, 5, "obj-64", "toggle", "int", 0, 5, "obj-66", "toggle", "int", 0, 5, "obj-68", "toggle", "int", 0, 5, "obj-72", "toggle", "int", 0, 5, "obj-70", "toggle", "int", 0, 5, "obj-57", "textedit", "set", "D:/1-Max/NodeTest/whiteList.txt", 5, "obj-75", "textedit", "set", "D:/1-Max/NodeTest/VoiceAssets/2-Output/", 5, "obj-76", "textedit", "set", "D:/1-Max/NodeTest/VoiceAssets/1-Start/English/3RawStudio/SeventySix.esm/CrScorchedMale/" ]
-						}
-, 						{
-							"number" : 4,
-							"data" : [ 5, "obj-63", "toggle", "int", 0, 5, "obj-64", "toggle", "int", 0, 5, "obj-66", "toggle", "int", 1, 5, "obj-68", "toggle", "int", 0, 5, "obj-72", "toggle", "int", 0, 5, "obj-70", "toggle", "int", 0, 5, "obj-57", "textedit", "set", "D:/1-Max/NodeTest/whiteList.txt", 5, "obj-75", "textedit", "set", "D:/1-Max/NodeTest/VoiceAssets/2-Output/other/", 5, "obj-76", "textedit", "set", "D:/1-Max/NodeTest/VoiceAssets/1-Start/English/3RawStudio/SeventySix.esm/CrScorchedMale/" ]
-						}
- ],
-					"stored1" : [ 0.454901960784314, 0.749019607843137, 0.901960784313726, 1.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"bubble" : 1,
 					"fontname" : "Optima ExtraBlack",
 					"fontsize" : 24.0,
@@ -3397,6 +3374,8 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
 						"watch" : 1
 					}
 ,
@@ -4484,6 +4463,8 @@
 									"saved_object_attributes" : 									{
 										"autostart" : 0,
 										"defer" : 0,
+										"node_bin_path" : "",
+										"npm_bin_path" : "",
 										"watch" : 0
 									}
 ,
@@ -4942,6 +4923,8 @@
 													"saved_object_attributes" : 													{
 														"autostart" : 0,
 														"defer" : 0,
+														"node_bin_path" : "",
+														"npm_bin_path" : "",
 														"watch" : 0
 													}
 ,
@@ -5746,30 +5729,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-15", 0 ],
-					"order" : 1,
-					"source" : [ "obj-94", 2 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-27", 0 ],
-					"order" : 2,
-					"source" : [ "obj-94", 2 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-77", 0 ],
-					"order" : 0,
-					"source" : [ "obj-94", 2 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-110", 0 ],
 					"source" : [ "obj-99", 3 ]
 				}
@@ -5786,48 +5745,48 @@
 		"dependency_cache" : [ 			{
 				"name" : "Screen Shot 2020-05-25 at 3.14.53 PM.png",
 				"bootpath" : "~/Desktop",
-				"patcherrelativepath" : "../../../../../../../../Desktop",
+				"patcherrelativepath" : "../../../../../../../Desktop",
 				"type" : "PNG",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "n4m.max-fs.js",
-				"bootpath" : "~/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/File_Grabber/Project/File Grabber/code",
+				"bootpath" : "~/Documents/GitHub/Max Projects/File_Grabber/Project/File Grabber/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "n4m.monitor.maxpat",
-				"bootpath" : "~/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/File_Grabber/Project/File Grabber/patchers",
+				"bootpath" : "~/Documents/GitHub/Max Projects/File_Grabber/Project/File Grabber/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "resize_n4m_monitor_patcher.js",
-				"bootpath" : "~/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/File_Grabber/Project/File Grabber/code",
+				"bootpath" : "~/Documents/GitHub/Max Projects/File_Grabber/Project/File Grabber/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "fit_jweb_to_bounds.js",
-				"bootpath" : "~/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/File_Grabber/Project/File Grabber/code",
+				"bootpath" : "~/Documents/GitHub/Max Projects/File_Grabber/Project/File Grabber/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "tour_max8_n4m3.js",
-				"bootpath" : "~/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/File_Grabber/Project/File Grabber/code",
+				"bootpath" : "~/Documents/GitHub/Max Projects/File_Grabber/Project/File Grabber/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "File_Grabber.js",
-				"bootpath" : "~/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/File_Grabber/Project/File Grabber/code",
+				"bootpath" : "~/Documents/GitHub/Max Projects/File_Grabber/Project/File Grabber/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
 				"implicit" : 1
