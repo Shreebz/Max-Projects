@@ -13,6 +13,8 @@ let whitelist;
 let copyList = [];
 let operating_system = os.platform
 
+maxAPI.post("hello");
+
 // Reads dir, returns array of files
 const readDir = function(filePath) {
     let files = fs.readdirSync(filePath);

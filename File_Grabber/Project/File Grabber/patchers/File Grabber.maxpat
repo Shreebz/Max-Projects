@@ -63,7 +63,7 @@
 					"presentation_rect" : [ 40.107147216796875, 769.44915771484375, 175.0, 106.0 ],
 					"preset_data" : [ 						{
 							"number" : 1,
-							"data" : [ 5, "obj-75", "textedit", "set", "destination", 5, "obj-57", "textedit", "set", "whitelist.txt", 5, "obj-76", "textedit", "set", "source" ]
+							"data" : [ 5, "obj-75", "textedit", "set", "Macintosh HD:/Users/dschreiberjr/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/testfilesOneWhitelist/2-destination/", 5, "obj-57", "textedit", "set", "Macintosh HD:/Users/dschreiberjr/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/testfilesOneWhitelist/whiteList.txt", 5, "obj-76", "textedit", "set", "Macintosh HD:/Users/dschreiberjr/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/testfilesOneWhitelist/1-source/English/3Raw/Project/" ]
 						}
 , 						{
 							"number" : 2,
@@ -128,12 +128,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-112",
+					"linecount" : 9,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 326.0, 565.0, 115.0, 22.0 ],
-					"text" : "whitelist.txt"
+					"patching_rect" : [ 326.0, 565.0, 115.0, 129.0 ],
+					"text" : "\"Macintosh HD:/Users/dschreiberjr/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/testfilesOneWhitelist/whiteList.txt\""
 				}
 
 			}
@@ -661,7 +662,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 208.5, 238.0, 72.0, 22.0 ],
-					"restore" : [ "source" ],
+					"restore" : [ "Macintosh HD:/Users/dschreiberjr/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/testfilesOneWhitelist/1-source/English/3Raw/Project/" ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
@@ -680,7 +681,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 148.0, 618.5, 79.0, 22.0 ],
-					"restore" : [ "whitelist.txt" ],
+					"restore" : [ "Macintosh HD:/Users/dschreiberjr/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/testfilesOneWhitelist/whiteList.txt" ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
@@ -699,7 +700,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 614.5, 727.0, 94.0, 22.0 ],
-					"restore" : [ "destination" ],
+					"restore" : [ "Macintosh HD:/Users/dschreiberjr/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/testfilesOneWhitelist/2-destination/" ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
@@ -848,6 +849,7 @@
 					"bangmode" : 1,
 					"id" : "obj-76",
 					"keymode" : 1,
+					"linecount" : 2,
 					"lines" : 1,
 					"maxclass" : "textedit",
 					"numinlets" : 1,
@@ -858,7 +860,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 40.107147216796875, 397.821441650390625, 1098.999969482421875, 24.0 ],
 					"tabmode" : 0,
-					"text" : "source"
+					"text" : "\"Macintosh HD:/Users/dschreiberjr/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/testfilesOneWhitelist/1-source/English/3Raw/Project/\""
 				}
 
 			}
@@ -868,6 +870,7 @@
 					"bangmode" : 1,
 					"id" : "obj-75",
 					"keymode" : 1,
+					"linecount" : 2,
 					"lines" : 1,
 					"maxclass" : "textedit",
 					"numinlets" : 1,
@@ -878,7 +881,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 40.107147216796875, 550.3214111328125, 1098.551559448242188, 22.0 ],
 					"tabmode" : 0,
-					"text" : "destination"
+					"text" : "\"Macintosh HD:/Users/dschreiberjr/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/testfilesOneWhitelist/2-destination/\""
 				}
 
 			}
@@ -888,6 +891,7 @@
 					"bangmode" : 1,
 					"id" : "obj-57",
 					"keymode" : 1,
+					"linecount" : 2,
 					"lines" : 1,
 					"maxclass" : "textedit",
 					"numinlets" : 1,
@@ -898,7 +902,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 40.107147216796875, 708.46337890625, 1098.999969482421875, 27.0 ],
 					"tabmode" : 0,
-					"text" : "whitelist.txt"
+					"text" : "\"Macintosh HD:/Users/dschreiberjr/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/testfilesOneWhitelist/whiteList.txt\""
 				}
 
 			}
@@ -3563,8 +3567,6 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
-						"node_bin_path" : "",
-						"npm_bin_path" : "",
 						"watch" : 1
 					}
 ,
@@ -4652,8 +4654,6 @@
 									"saved_object_attributes" : 									{
 										"autostart" : 0,
 										"defer" : 0,
-										"node_bin_path" : "",
-										"npm_bin_path" : "",
 										"watch" : 0
 									}
 ,
@@ -5112,8 +5112,6 @@
 													"saved_object_attributes" : 													{
 														"autostart" : 0,
 														"defer" : 0,
-														"node_bin_path" : "",
-														"npm_bin_path" : "",
 														"watch" : 0
 													}
 ,
