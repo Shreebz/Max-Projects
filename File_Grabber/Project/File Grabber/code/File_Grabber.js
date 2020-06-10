@@ -61,14 +61,14 @@ maxAPI.addHandlers({
             // Split up the folders in the path
             let folders = file.dir.split(path.sep);
             // Grab the last 3 folders from the end of the path
-            [ language, vtype, theRest, theRest2 ] = folders.splice(-4);
+            [ language, raw, proj, vtype ] = folders.splice(-4);
             
             // For each language in languages
             languages.forEach(language => {
                 // Rebuild the to/from paths, push to an array
                 copyList.push({
-                    from: path.join(path.resolve(file.dir), '../../../../', language, vtype, theRest, theRest2, file.base),
-                    to: path.join(destination_directory, language, vtype, theRest, theRest2, file.base)
+                    from: path.join(path.resolve(file.dir), '../../../../', language, raw, proj, vtype, file.base),
+                    to: path.join(destination_directory, language, raw, proj, vtype, file.base)
                 });
             })
         });
@@ -76,7 +76,7 @@ maxAPI.addHandlers({
 
         // Loops over the copyList and copy
         copyList.forEach(({ from, to }) => { 
-            maxAPI.post(`Copying ${from} to ${to}`);
+            //maxAPI.post(`Copying ${from} to ${to}`);
             maxAPI.outletBang();
             copyFile(from, to);
         });
