@@ -22,10 +22,18 @@ const readDir = function(filePath) {
         .map(file => path.parse(path.join(filePath, file)));
 }
 
+// Read the files from the initial directory
+let dir2 = readDir(source_directory);
+
+// Remove files that aren't in whitelist
+let fromFiles = dir2.filter(fp => whitelist.includes(fp.base));
+
 // Gets whitelist
 function retrieveWhitelist(path) {
     return fs.readFileSync(path).toString().split('\r\n');
 }
+
+whitelist = retrieveWhitelist(whitelist_location);
 
 // Copies file from one place to another
 function copyFile(from, to) {
@@ -51,10 +59,10 @@ maxAPI.addHandlers({
         // maxAPI.post("Retrieved whitelist " + whitelist);
 
         // Read the files from the initial directory
-        let dir = readDir(source_directory);
+        let dir2 = readDir(source_directory);
 
         // Remove files that aren't in whitelist
-        let fromFiles = dir.filter(fp => whitelist.includes(fp.base));
+        let fromFiles = dir2.filter(fp => whitelist.includes(fp.base));
 
         // For each file we know we need
         fromFiles.forEach(file => {
