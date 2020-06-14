@@ -167,7 +167,11 @@ maxAPI.addHandlers({
         maxAPI.post("Source directory is " + source_proj_dir);
         maxAPI.post("Whitelist location is " + whitelist_location);
         maxAPI.post("Destination directory is " + destination_directory);
-        maxAPI.post("Languages: " + languages);
+        if (languages.length > 0) {
+            maxAPI.post("Languages: " + languages);
+        } else {
+            maxAPI.post("Languages: None");
+        }
     },
 
     English: (msg) => {
