@@ -40,14 +40,41 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-70",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 164.0, 750.0, 150.0, 33.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 40.107147216796875, 747.44915771484375, 184.25469970703125, 20.0 ],
+					"text" : "Shift + left click to save a preset"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontsize" : 18.0,
+					"id" : "obj-63",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 120.0, 1123.0, 118.0, 29.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 68.607147216796875, 880.44915771484375, 118.0, 29.0 ],
+					"text" : "Clear Presets"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-54",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 145.0, 931.0, 55.0, 22.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 40.107147216796875, 886.0, 55.0, 22.0 ],
 					"text" : "clearall"
 				}
 
@@ -68,15 +95,15 @@
 , 			{
 				"box" : 				{
 					"annotation" : "Click this to copy files",
-					"fontsize" : 64.0,
+					"fontsize" : 72.0,
 					"id" : "obj-52",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 748.3643798828125, 44.0, 176.0, 80.0 ],
+					"patching_rect" : [ 538.3643798828125, 237.0, 197.0, 89.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 437.70550537109375, 794.321426391601562, 192.0, 80.0 ],
+					"presentation_rect" : [ 477.70550537109375, 789.821426391601562, 215.0, 89.0 ],
 					"text" : "Copy!",
 					"textjustification" : 1
 				}
@@ -152,23 +179,8 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 305.0, 1088.0, 177.0, 62.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 48.607147216796875, 941.0, 211.0, 35.0 ],
+					"presentation_rect" : [ 477.70550537109375, 897.46337890625, 211.0, 35.0 ],
 					"text" : "Open Debug Menu",
-					"textjustification" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontsize" : 24.0,
-					"id" : "obj-236",
-					"linecount" : 2,
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 487.0, 1088.0, 211.0, 62.0 ],
-					"text" : "Open Debug Window",
 					"textjustification" : 1
 				}
 
@@ -1343,7 +1355,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 196.0, 84.0, 99.0, 22.0 ],
-									"restore" : [ "English", 1 ],
+									"restore" : [ "English", 0 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0,
 										"parameter_mappable" : 0
@@ -1562,12 +1574,7 @@
 					"outlettype" : [ "preset", "int", "preset", "int" ],
 					"patching_rect" : [ 129.0, 967.0, 175.0, 106.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 40.107147216796875, 769.44915771484375, 175.0, 106.0 ],
-					"preset_data" : [ 						{
-							"number" : 1,
-							"data" : [ 5, "obj-223", "toggle", "int", 0, 5, "obj-226", "toggle", "int", 0, 5, "obj-225", "toggle", "int", 0, 5, "obj-222", "toggle", "int", 0, 5, "obj-221", "toggle", "int", 1, 5, "obj-224", "toggle", "int", 0, 5, "obj-75", "textedit", "set", "DTS_Samples:/test/testfilesOneWhitelist/2-destination/", 5, "obj-57", "textedit", "set", "DTS_Samples:/test/testfilesOneWhitelist/whiteList.txt", 5, "obj-76", "textedit", "set", "DTS_Samples:/test/testfilesOneWhitelist/1-source/English/3Raw/Project/" ]
-						}
- ]
+					"presentation_rect" : [ 40.107147216796875, 769.44915771484375, 175.0, 106.0 ]
 				}
 
 			}
@@ -1627,7 +1634,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 329.921043395996094, 567.0, 447.0, 22.0 ],
-					"text" : "DTS_Samples:/test/testfilesOneWhitelist/whiteList.txt"
+					"text" : "\"Text File.txt\""
 				}
 
 			}
@@ -1766,7 +1773,7 @@
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 740.0, 1078.0, 400.0, 220.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 652.368110656738281, 751.821426391601562, 1000.739036560058594, 299.0 ],
+					"presentation_rect" : [ 805.237567901611328, 747.44915771484375, 577.869548797607422, 228.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -1804,18 +1811,18 @@
 					"bubble" : 1,
 					"bubbleside" : 0,
 					"fontname" : "Optima ExtraBlack",
-					"fontsize" : 24.0,
+					"fontsize" : 18.0,
 					"id" : "obj-60",
-					"linecount" : 4,
+					"linecount" : 5,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1333.0, 342.5, 341.0, 143.0 ],
+					"patching_rect" : [ 1333.0, 342.5, 300.0, 136.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 3,
-					"presentation_rect" : [ 350.25469970703125, 151.821426391601562, 396.0, 114.0 ],
-					"text" : "Create a text file outside of this app. One filename per line, and parent folder name in brackets.",
-					"textjustification" : 1
+					"presentation_rect" : [ 378.75469970703125, 201.821426391601562, 355.0, 92.0 ],
+					"text" : "- Create a text file outside of this app.\n- One filename per line.\n- Parent folder name in brackets.",
+					"textjustification" : 0
 				}
 
 			}
@@ -1886,7 +1893,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 1438.96429443359375, 308.821426391601562, 130.140350341796875, 36.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 1413.96429443359375, 438.94915771484375, 92.0, 36.0 ],
+					"presentation_rect" : [ 1365.96429443359375, 438.94915771484375, 92.0, 36.0 ],
 					"text" : "Step 4:"
 				}
 
@@ -2143,7 +2150,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 223.0, 230.0, 72.0, 22.0 ],
-					"restore" : [ "DTS_Samples:/test/testfilesOneWhitelist/1-source/English/3Raw/Project/" ],
+					"restore" : [ "Source Folder" ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
@@ -2162,7 +2169,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 148.0, 624.5, 79.0, 22.0 ],
-					"restore" : [ "DTS_Samples:/test/testfilesOneWhitelist/whiteList.txt" ],
+					"restore" : [ "Text File.txt" ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
@@ -2316,6 +2323,7 @@
 				"box" : 				{
 					"autoscroll" : 0,
 					"bangmode" : 1,
+					"fontsize" : 14.0,
 					"id" : "obj-76",
 					"keymode" : 1,
 					"lines" : 1,
@@ -2324,11 +2332,11 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 9.0, 310.451751708984375, 526.0, 22.0 ],
+					"patching_rect" : [ 9.0, 310.451751708984375, 613.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 40.107147216796875, 397.821441650390625, 1098.999969482421875, 24.0 ],
 					"tabmode" : 0,
-					"text" : "DTS_Samples:/test/testfilesOneWhitelist/1-source/English/3Raw/Project/"
+					"text" : "\"Source Folder\""
 				}
 
 			}
@@ -2336,6 +2344,7 @@
 				"box" : 				{
 					"autoscroll" : 0,
 					"bangmode" : 1,
+					"fontsize" : 14.0,
 					"id" : "obj-75",
 					"keymode" : 1,
 					"lines" : 1,
@@ -2344,11 +2353,11 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 329.921043395996094, 843.0, 526.0, 22.0 ],
+					"patching_rect" : [ 329.921043395996094, 843.0, 611.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 40.107147216796875, 550.3214111328125, 1098.551559448242188, 22.0 ],
+					"presentation_rect" : [ 40.107147216796875, 550.3214111328125, 1098.999984741210938, 22.0 ],
 					"tabmode" : 0,
-					"text" : "DTS_Samples:/test/testfilesOneWhitelist/2-destination/"
+					"text" : "\"Destination Folder\""
 				}
 
 			}
@@ -2356,6 +2365,7 @@
 				"box" : 				{
 					"autoscroll" : 0,
 					"bangmode" : 1,
+					"fontsize" : 14.0,
 					"id" : "obj-57",
 					"keymode" : 1,
 					"lines" : 1,
@@ -2364,11 +2374,11 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 43.0, 708.0, 528.0, 62.0 ],
+					"patching_rect" : [ 43.0, 708.0, 603.0, 62.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 40.107147216796875, 708.46337890625, 1098.999969482421875, 27.0 ],
 					"tabmode" : 0,
-					"text" : "DTS_Samples:/test/testfilesOneWhitelist/whiteList.txt"
+					"text" : "\"Text File.txt\""
 				}
 
 			}
@@ -2421,7 +2431,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 869.0, 117.0, 150.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 293.846153259277344, 869.75, 152.521926879882812, 20.0 ],
+					"presentation_rect" : [ 508.944541931152344, 765.75, 152.521926879882812, 20.0 ],
 					"text" : "- Press button to copy files"
 				}
 
@@ -2441,7 +2451,7 @@
 					"presentation" : 1,
 					"presentation_linecount" : 4,
 					"presentation_rect" : [ 891.967033386230469, 143.321426391601562, 307.0, 143.0 ],
-					"text" : "Set:\n- Source folder\n- Destination folder\n- whiteList.txt"
+					"text" : "Set:\n- Source folder\n- Destination folder\n- Text file"
 				}
 
 			}
@@ -2470,13 +2480,14 @@
 					"fontname" : "Optima ExtraBlack",
 					"fontsize" : 24.0,
 					"id" : "obj-48",
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 493.1798095703125, 82.75, 130.140350341796875, 40.0 ],
+					"patching_rect" : [ 493.1798095703125, 82.75, 130.140350341796875, 69.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 98.607147216796875, 225.821426391601562, 127.0, 40.0 ],
-					"text" : "Turn On"
+					"presentation_rect" : [ 98.607147216796875, 240.321426391601562, 197.0, 40.0 ],
+					"text" : "Toggle On/Off"
 				}
 
 			}
@@ -6824,7 +6835,7 @@
 					"patching_rect" : [ 1477.0, 498.178573608398438, 100.0, 289.743589743589723 ],
 					"pic" : "Macintosh HD:/Users/dschreiberjr/Desktop/Screen Shot 2020-06-13 at 7.58.09 PM.png",
 					"presentation" : 1,
-					"presentation_rect" : [ 1220.25469970703125, -9.217035146859985, 102.0, 295.538461538461547 ]
+					"presentation_rect" : [ 505.25469970703125, 7.282964853140015, 102.0, 295.538461538461547 ]
 				}
 
 			}
@@ -7313,13 +7324,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-233", 0 ],
-					"source" : [ "obj-236", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-221", 0 ],
 					"order" : 4,
 					"source" : [ "obj-24", 0 ]
@@ -7399,7 +7403,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-23", 0 ],
+					"destination" : [ "obj-233", 0 ],
 					"order" : 0,
 					"source" : [ "obj-241", 0 ]
 				}
@@ -7407,16 +7411,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-233", 0 ],
-					"order" : 1,
-					"source" : [ "obj-241", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-36", 0 ],
-					"order" : 2,
+					"order" : 1,
 					"source" : [ "obj-241", 0 ]
 				}
 
@@ -7568,6 +7564,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-15", 0 ],
+					"order" : 0,
+					"source" : [ "obj-52", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-241", 0 ],
+					"order" : 1,
 					"source" : [ "obj-52", 0 ]
 				}
 
@@ -7620,6 +7625,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-25", 0 ],
 					"source" : [ "obj-62", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-54", 0 ],
+					"source" : [ "obj-63", 0 ]
 				}
 
 			}

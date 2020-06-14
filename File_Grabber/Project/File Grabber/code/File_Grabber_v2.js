@@ -5,15 +5,8 @@ const mkdirp = require('mkdirp');
 const maxAPI = require('max-api');
 const os = require('os');
 
-// ---- test shit ------
-// textFile = "/Users/dschreiberjr/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/testfilesOneWhitelist/whiteList.txt"
-// source_proj_dir = "/Users/dschreiberjr/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/testfilesOneWhitelist/1-source/English/3Raw/Project"
-// var destination_directory = "/Users/dschreiberjr/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/testfilesOneWhitelist/2-destination"
-// var source_test_dir = "/Users/dschreiberjr/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/testfilesOneWhitelist/1-source/English/3Raw/Project/files/001.mp3"
-// ---- test shit ------
-
 // Configuration
-const ftype_to_copy = "" // File type to copy
+const ftype_to_copy = ".wav" // File type to copy
 var whitelist_location; // A whitelist.txt file
 var source_proj_dir; // This is proj directory
 var destination_directory; // Destination folder
@@ -46,22 +39,32 @@ function add_lang(langs, lang) {
 }
 
 // Copies file from one place to another
-function copy_files(from, to, vtype, audio_file) {
-    languages.forEach( language => {
-        // Final format of source path (with file).
-        from2 = path.normalize(path.join(from, "../../../../../", source_path_splicer(language, from), audio_file));
-        // Final format of destination path (with file).
-        to2 = path.normalize(path.join(to, "../../", dest_path_splicer(language, to), audio_file));
-        // If the source file exists
-        if (fs.existsSync(from2)){
-            // Copy the files
-            create_path_and_copy_files(from2, to2)
-            // console.log("Source: " + from2)
-            maxAPI.post("Source: " + from2)
-            maxAPI.post("Destin: " + to2)
-            // console.log("Destin: " + to2)
-        }
-    })
+function copy_files(from, to, base_folder2, audio_file) {
+    // If there are languages selected
+    if (languages.length > 0){
+        // For each language in the array
+        languages.forEach( language => {
+            // Final format of source path (with file).
+            from2 = path.normalize(path.join(from, "../../../../../", source_path_splicer(language, from), audio_file));
+            // Final format of destination path (with file).
+            to2 = path.normalize(path.join(to, "../../", dest_path_splicer(language, to), audio_file));
+            // If the source file exists
+            if (fs.existsSync(from2)){
+                // Copy the files
+                create_path_and_copy_files(from2, to2)
+                // console.log("Source: " + from2)
+                maxAPI.post("Source: " + from2)
+                maxAPI.post("Destin: " + to2)
+                // console.log("Destin: " + to2)
+            }
+        })
+    } else {
+        // Destination format
+        to3 = path.normalize(path.join(to, "../../", base_folder2, audio_file));
+        // Path format for non project files
+        from3 = path.normalize(path.join(from, "../", audio_file));
+        create_path_and_copy_files(from3, to3)
+    }
 }
 
 function create_path_and_copy_files(from, to) {
@@ -74,19 +77,19 @@ function source_path_splicer(language, path_to_split){
     // Split path so that it can be spliced (folders separated to individual variables)
     folders = path_to_split.split(path.sep);
 
-    [lang, raw, proj, vtype] = folders.splice(-5);
-    return path.join(language, raw, proj, vtype)
+    [lang, raw, proj, base_folder2] = folders.splice(-5);
+    return path.join(language, raw, proj, base_folder2)
     // Split up the folders in the path
 }
 
-// Splice up the destination path. Separate last x folders from destination path.
+// Splice up the destination path. Separate last 5 folders from destination path.
 function dest_path_splicer(language, path_to_split) {
     // Split path so that it can be spliced (folders separated to individual variables)
     folders = path_to_split.split(path.sep);
     // Last 5 folders separated and assigned a variable.
-    [lang, raw, proj, vtype] = folders.splice(-5);
+    [lang, raw, proj, base_folder2] = folders.splice(-5);
     // Rebuild destination path with language being iterated.
-    return path.join(language, vtype)
+    return path.join(language, base_folder2)
 }
 
 // Callback funtion for debugging
@@ -101,8 +104,8 @@ function retrieveWhitelist(path1, callback) {
     lineReader.eachLine(path1, (line, last) => {
         // If a line has brackets. This is the folder name.
         if (line.includes('[' && ']')) {
-            vtype_folder = line.replace('[', '').replace(']', '');
-            vtype_path = path.join(source_proj_dir, vtype_folder);
+            base_folder = line.replace('[', '').replace(']', '');
+            base_path = path.join(source_proj_dir, base_folder);
             // Remove brackets from folder name, and store it.
             parent_folder = line.replace('[', '').replace(']', '');
             // If a line includes ".wav".
@@ -110,7 +113,7 @@ function retrieveWhitelist(path1, callback) {
             // The line is the audio file. "file.wav"
             audio_file = path.join(line);
             // Create full source path (with file and extension)
-            source_path_with_file = path.normalize(path.join(vtype_path, audio_file));
+            source_path_with_file = path.normalize(path.join(base_path, audio_file));
             // Create full destination path (with file and extension)
             dest_path_with_file = path.normalize(path.join(destination_directory, parent_folder, audio_file));
             // Run function that formats files further.
