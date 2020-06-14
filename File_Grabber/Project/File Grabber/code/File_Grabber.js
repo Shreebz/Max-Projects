@@ -13,6 +13,8 @@ let whitelist;
 let copyList = [];
 let operating_system = os.platform
 
+maxAPI.post("hello");
+
 // Reads dir, returns array of files
 const readDir = function(filePath) {
     let files = fs.readdirSync(filePath);
@@ -20,10 +22,18 @@ const readDir = function(filePath) {
         .map(file => path.parse(path.join(filePath, file)));
 }
 
+// Read the files from the initial directory
+let dir2 = readDir(source_directory);
+
+// Remove files that aren't in whitelist
+let fromFiles = dir2.filter(fp => whitelist.includes(fp.base));
+
 // Gets whitelist
 function retrieveWhitelist(path) {
     return fs.readFileSync(path).toString().split('\r\n');
 }
+
+whitelist = retrieveWhitelist(whitelist_location);
 
 // Copies file from one place to another
 function copyFile(from, to) {
@@ -49,24 +59,24 @@ maxAPI.addHandlers({
         // maxAPI.post("Retrieved whitelist " + whitelist);
 
         // Read the files from the initial directory
-        let dir = readDir(source_directory);
+        let dir2 = readDir(source_directory);
 
         // Remove files that aren't in whitelist
-        let fromFiles = dir.filter(fp => whitelist.includes(fp.base));
+        let fromFiles = dir2.filter(fp => whitelist.includes(fp.base));
 
         // For each file we know we need
         fromFiles.forEach(file => {
             // Split up the folders in the path
             let folders = file.dir.split(path.sep);
             // Grab the last 3 folders from the end of the path
-            [ language, vtype, theRest, theRest2 ] = folders.splice(-4);
+            [ language, raw, proj, vtype ] = folders.splice(-4);
             
             // For each language in languages
             languages.forEach(language => {
                 // Rebuild the to/from paths, push to an array
                 copyList.push({
-                    from: path.join(path.resolve(file.dir), '../../../../', language, vtype, theRest, theRest2, file.base),
-                    to: path.join(destination_directory, language, vtype, theRest, theRest2, file.base)
+                    from: path.join(path.resolve(file.dir), '../../../../', language, raw, proj, vtype, file.base),
+                    to: path.join(destination_directory, language, raw, proj, vtype, file.base)
                 });
             })
         });
@@ -74,7 +84,7 @@ maxAPI.addHandlers({
 
         // Loops over the copyList and copy
         copyList.forEach(({ from, to }) => { 
-            maxAPI.post(`Copying ${from} to ${to}`);
+            //maxAPI.post(`Copying ${from} to ${to}`);
             maxAPI.outletBang();
             copyFile(from, to);
         });
