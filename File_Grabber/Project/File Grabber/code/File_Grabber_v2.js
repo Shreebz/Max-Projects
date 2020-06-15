@@ -64,6 +64,8 @@ function copy_files(from, to, base_folder2, audio_file) {
         // Path format for non project files
         from3 = path.normalize(path.join(from, "../", audio_file));
         create_path_and_copy_files(from3, to3)
+        maxAPI.post("Source: " + from3)
+        maxAPI.post("Destin: " + to3)
     }
 }
 
@@ -94,7 +96,10 @@ function dest_path_splicer(language, path_to_split) {
 
 // Callback funtion for debugging
 function logInfo() {
-    console.log("Callback function executed");
+    // console.log("Callback function executed");
+    maxAPI.post("Dance! Finished copying.");
+    maxAPI.outlet("Dance!");
+    // maxAPI.outletBang();
 }
 
 // Loop to read white list and copy files.
@@ -127,13 +132,20 @@ function retrieveWhitelist(path1, callback) {
     })
 }
 
+
+
 // Mac - Format file paths. Mac directory formats are funny. If there's a bug, it's probably here.
-function sdf(msg) {
+function remove_quotes(msg) {
+    let regex_quotes = '\"'
+    msg = msg.replace(regex_quotes, '');
+    return msg = msg.replace(regex_quotes, '');
+    /*
     if (operating_system == 'darwin') {
         return msg.replace("Macintosh HD:/", "/");
     } else {
         return msg
     }
+    */
 }
 
 if (languages.length > -1) 
@@ -147,18 +159,18 @@ maxAPI.addHandlers({
     },
     // Choose source folder, and format
     source: (msg) => {
-        source_proj_dir = sdf(msg);
+        source_proj_dir = remove_quotes(msg);
         maxAPI.post("OS is " + operating_system);
         maxAPI.post("Source directory is " + source_proj_dir);
     },
     // Choose output directory, and format
     dest: (msg) => {
-        destination_directory = sdf(msg);
+        destination_directory = remove_quotes(msg);
         maxAPI.post("Destination directory is " + destination_directory);
     },
     // Choose whitelist
     whiteList: (msg) => {
-        whitelist_location = sdf(msg);
+        whitelist_location = remove_quotes(msg);
         maxAPI.post("Whitelist location is " + whitelist_location);
     },
 
