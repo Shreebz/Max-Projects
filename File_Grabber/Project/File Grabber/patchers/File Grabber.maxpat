@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1714.0, 78.0, 1492.0, 967.0 ],
+		"rect" : [ 87.0, 76.0, 1659.0, 1026.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,15 +40,45 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-123",
+					"id" : "obj-12",
 					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 690.0, 878.571426391601562, 150.0, 33.0 ],
+					"patching_rect" : [ 689.0, 753.0, 150.0, 33.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 690.0, 878.571426391601562, 207.25469970703125, 20.0 ],
-					"text" : "Shift + Alt + left click to clear a preset"
+					"presentation_rect" : [ 687.0, 839.0, 240.25469970703125, 20.0 ],
+					"text" : "- Shift + Alt/Opt + left click to clear a preset"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.423529411764706, 0.407843137254902, 0.407843137254902, 1.0 ],
+					"fontsize" : 16.0,
+					"id" : "obj-4",
+					"maxclass" : "textedit",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "int", "", "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ -6.25, 1163.0, 321.0, 24.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 665.10711669921875, 754.5, 380.0, 65.69915771484375 ],
+					"text" : "Enter preset name here, then create preset."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-123",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 690.0, 878.571426391601562, 150.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 727.0, 737.46337890625, 81.25469970703125, 20.0 ],
+					"text" : "Preset name"
 				}
 
 			}
@@ -70,7 +100,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 3648.0, 118.0, 1263.0, 873.0 ],
+						"rect" : [ 623.0, 118.0, 1263.0, 873.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -99,6 +129,41 @@
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-15",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 529.0, 592.5, 150.0, 47.0 ],
+									"text" : "outputs path that is compatible with the current running OS"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-11",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 529.0, 61.0, 186.0, 20.0 ],
+									"text" : "Feed in a folder path or file path"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-9",
+									"linecount" : 4,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 420.5, 430.0, 150.0, 60.0 ],
+									"text" : "the os will determine which bang fires, and this which \"path format\" is chosen."
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-5",
 									"maxclass" : "newobj",
@@ -175,7 +240,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 311.0, 436.0, 129.0, 20.0 ],
+									"patching_rect" : [ 92.0, 463.0, 129.0, 20.0 ],
 									"text" : "Store \"win style\" path"
 								}
 
@@ -362,7 +427,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 225.0, 557.0, 33.0, 20.0 ],
+									"patching_rect" : [ 288.0, 531.0, 33.0, 20.0 ],
 									"text" : "win"
 								}
 
@@ -373,7 +438,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 619.0, 551.0, 34.0, 20.0 ],
+									"patching_rect" : [ 700.0, 524.0, 34.0, 20.0 ],
 									"text" : "mac"
 								}
 
@@ -568,7 +633,6 @@
 					}
 ,
 					"patching_rect" : [ 696.0, 690.94915771484375, 113.0, 22.0 ],
-					"presentation_linecount" : 2,
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -599,7 +663,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 3648.0, 118.0, 1263.0, 873.0 ],
+						"rect" : [ 623.0, 118.0, 1263.0, 873.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -629,12 +693,47 @@
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-15",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 529.0, 592.5, 150.0, 47.0 ],
+									"text" : "outputs path that is compatible with the current running OS"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-11",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 529.0, 61.0, 186.0, 20.0 ],
+									"text" : "Feed in a folder path or file path"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-9",
+									"linecount" : 4,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 420.5, 430.0, 150.0, 60.0 ],
+									"text" : "the os will determine which bang fires, and this which \"path format\" is chosen."
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-5",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 225.0, 463.0, 156.0, 22.0 ],
+									"patching_rect" : [ 225.0, 436.0, 156.0, 22.0 ],
 									"restore" : [ "/Users/dschreiberjr/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/testfilesOneWhitelist/whiteList.txt" ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0,
@@ -653,7 +752,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 614.0, 449.0, 161.0, 22.0 ],
+									"patching_rect" : [ 667.5, 436.0, 161.0, 22.0 ],
 									"restore" : [ "/Users/dschreiberjr/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/testfilesOneWhitelist/whiteList.txt" ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0,
@@ -704,7 +803,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 311.0, 436.0, 129.0, 20.0 ],
+									"patching_rect" : [ 64.0, 436.0, 129.0, 20.0 ],
 									"text" : "Store \"win style\" path"
 								}
 
@@ -737,7 +836,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 800.0, 449.0, 133.0, 20.0 ],
+									"patching_rect" : [ 853.5, 436.0, 133.0, 20.0 ],
 									"text" : "Store \"mac style\" path"
 								}
 
@@ -891,7 +990,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 225.0, 557.0, 33.0, 20.0 ],
+									"patching_rect" : [ 286.5, 518.0, 33.0, 20.0 ],
 									"text" : "win"
 								}
 
@@ -902,7 +1001,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 619.0, 551.0, 34.0, 20.0 ],
+									"patching_rect" : [ 731.0, 518.0, 34.0, 20.0 ],
 									"text" : "mac"
 								}
 
@@ -1127,7 +1226,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 3648.0, 118.0, 1263.0, 873.0 ],
+						"rect" : [ 314.0, 104.0, 1263.0, 873.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1157,6 +1256,41 @@
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-15",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 529.0, 592.5, 150.0, 47.0 ],
+									"text" : "outputs path that is compatible with the current running OS"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-11",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 529.0, 61.0, 186.0, 20.0 ],
+									"text" : "Feed in a folder path or file path"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-9",
+									"linecount" : 4,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 420.5, 430.0, 150.0, 60.0 ],
+									"text" : "the os will determine which bang fires, and this which \"path format\" is chosen."
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-5",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
@@ -1181,7 +1315,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 614.0, 449.0, 177.0, 22.0 ],
+									"patching_rect" : [ 667.5, 442.0, 177.0, 22.0 ],
 									"restore" : [ "/Users/dschreiberjr/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/testfilesOneWhitelist/1-source/English/3Raw/Project/" ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0,
@@ -1232,7 +1366,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 311.0, 436.0, 129.0, 20.0 ],
+									"patching_rect" : [ 71.5, 463.0, 129.0, 20.0 ],
 									"text" : "Store \"win style\" path"
 								}
 
@@ -1254,7 +1388,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 803.0, 356.0, 162.0, 20.0 ],
+									"patching_rect" : [ 853.0, 356.0, 162.0, 20.0 ],
 									"text" : "Conform path to \"mac style\""
 								}
 
@@ -1265,7 +1399,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 800.0, 449.0, 133.0, 20.0 ],
+									"patching_rect" : [ 853.0, 442.0, 133.0, 20.0 ],
 									"text" : "Store \"mac style\" path"
 								}
 
@@ -1288,7 +1422,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 821.0, 174.0, 150.0, 74.0 ],
+									"patching_rect" : [ 812.0, 174.0, 150.0, 74.0 ],
 									"text" : "Bang this message to get OS. Options are:\n\nmacintosh\nwindows"
 								}
 
@@ -1419,7 +1553,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 225.0, 557.0, 33.0, 20.0 ],
+									"patching_rect" : [ 295.0, 488.0, 33.0, 20.0 ],
 									"text" : "win"
 								}
 
@@ -1430,7 +1564,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 619.0, 551.0, 34.0, 20.0 ],
+									"patching_rect" : [ 731.5, 488.0, 34.0, 20.0 ],
 									"text" : "mac"
 								}
 
@@ -1483,7 +1617,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 647.0, 213.0, 153.0, 35.0 ],
-									"presentation_linecount" : 3,
 									"text" : ";\rmax getsystem sys_source"
 								}
 
@@ -1706,8 +1839,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 657.0, 1088.0, 135.0, 49.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 40.107147216796875, 750.0, 127.0, 49.0 ],
-					"text" : "Dance!"
+					"presentation_rect" : [ 40.107147216796875, 750.0, 127.0, 49.0 ]
 				}
 
 			}
@@ -1756,7 +1888,7 @@
 					"outlettype" : [ "jit_matrix", "" ],
 					"patching_rect" : [ 731.0, 1107.0, 159.0, 127.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 40.107147216796875, 807.25, 273.392852783203125, 133.0 ]
+					"presentation_rect" : [ 40.107147216796875, 807.25, 293.260932922363281, 163.75 ]
 				}
 
 			}
@@ -2553,10 +2685,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 164.0, 750.0, 150.0, 33.0 ],
+					"patching_rect" : [ 164.0, 750.0, 152.0, 33.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 690.0, 743.571426391601562, 184.25469970703125, 20.0 ],
-					"text" : "Shift + left click to save a preset"
+					"presentation_rect" : [ 687.0, 822.19915771484375, 196.25469970703125, 20.0 ],
+					"text" : "- Shift + left click to save a preset"
 				}
 
 			}
@@ -2569,10 +2701,10 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 22.5, 914.0, 118.0, 49.0 ],
+					"patching_rect" : [ 22.5, 896.0, 118.0, 49.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 733.710922241210938, 903.71337890625, 87.578155517578125, 49.0 ],
+					"presentation_rect" : [ 953.921907424926758, 892.5, 87.578155517578125, 49.0 ],
 					"text" : "Clear All Presets",
 					"textjustification" : 1
 				}
@@ -4044,7 +4176,7 @@
 					"outlettype" : [ "preset", "int", "preset", "int" ],
 					"patching_rect" : [ 17.5, 1001.0, 175.0, 106.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 690.0, 765.571426391601562, 175.0, 106.0 ],
+					"presentation_rect" : [ 687.0, 863.0, 244.0, 108.0 ],
 					"preset_data" : [ 						{
 							"number" : 1,
 							"data" : [ 5, "obj-223", "toggle", "int", 0, 5, "obj-226", "toggle", "int", 0, 5, "obj-225", "toggle", "int", 0, 5, "obj-222", "toggle", "int", 0, 5, "obj-221", "toggle", "int", 0, 5, "obj-224", "toggle", "int", 0, 5, "obj-75", "textedit", "set", "Dest folder", 5, "obj-57", "textedit", "set", "Text file.txt", 5, "obj-76", "textedit", "set", "Source fold" ]
@@ -4188,7 +4320,7 @@
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 858.0, 1123.0, 400.0, 220.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 948.500062942504883, 762.5, 444.869548797607422, 186.0 ],
+					"presentation_rect" : [ 1043.500062942504883, 762.5, 349.869548797607422, 186.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -4272,7 +4404,7 @@
 					"patching_rect" : [ 476.96429443359375, 646.821426391601562, 130.140350341796875, 36.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 571.10711669921875, 743.75, 92.0, 36.0 ],
-					"text" : "Step 5:"
+					"text" : "Step 5"
 				}
 
 			}
@@ -4565,7 +4697,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 306.96429443359375, 264.0, 118.0, 22.0 ],
-					"restore" : [ "Source fold" ],
+					"restore" : [ "\"Source fold\"" ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
@@ -4584,7 +4716,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 142.0, 631.0, 125.0, 22.0 ],
-					"restore" : [ "Text file.txt" ],
+					"restore" : [ "\"Text file.txt\"" ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
@@ -4603,7 +4735,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 804.75, 803.5, 140.0, 22.0 ],
-					"restore" : [ "Dest folder" ],
+					"restore" : [ "\"Dest folder\"" ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
@@ -5964,6 +6096,14 @@
 				"patchline" : 				{
 					"destination" : [ "obj-226", 0 ],
 					"order" : 1,
+					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"order" : 9,
 					"source" : [ "obj-24", 0 ]
 				}
 
