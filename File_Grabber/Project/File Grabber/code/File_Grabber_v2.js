@@ -158,18 +158,18 @@ maxAPI.addHandlers({
         retrieveWhitelist(whitelist_location, logInfo);
     },
     // Choose source folder, and format
-    source: (msg) => {
+    $source: (msg) => {
         source_proj_dir = remove_quotes(msg);
         maxAPI.post("OS is " + operating_system);
         maxAPI.post("Source directory is " + source_proj_dir);
     },
     // Choose output directory, and format
-    dest: (msg) => {
+    $dest: (msg) => {
         destination_directory = remove_quotes(msg);
         maxAPI.post("Destination directory is " + destination_directory);
     },
     // Choose whitelist
-    whiteList: (msg) => {
+    $list: (msg) => {
         whitelist_location = remove_quotes(msg);
         maxAPI.post("Whitelist location is " + whitelist_location);
     },
