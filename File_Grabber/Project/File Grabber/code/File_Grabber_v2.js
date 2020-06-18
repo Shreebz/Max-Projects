@@ -183,7 +183,7 @@ maxAPI.addHandlers({
         maxAPI.post("Whitelist location is " + whitelist_location);
         maxAPI.post("Destination directory is " + destination_directory);
         if (languages.length > 0) {
-            maxAPI.post("Languages: " + languages);
+            maxAPI.post("Languages: " + languages + " ");
         } else {
             maxAPI.post("Languages: None");
         }
@@ -195,7 +195,7 @@ maxAPI.addHandlers({
         } else {
             remove_lang(languages, "English");
         }
-        maxAPI.post(languages);
+        // maxAPI.post(languages);
     },
 
     French: (msg) => {
@@ -204,7 +204,7 @@ maxAPI.addHandlers({
         } else {
             remove_lang(languages, "French");
         }
-        maxAPI.post(languages);
+        // maxAPI.post(languages);
     },
 
     Italian: (msg) => {
@@ -213,7 +213,7 @@ maxAPI.addHandlers({
         } else {
             remove_lang(languages, "Italian");
         }
-        maxAPI.post(languages);
+        // maxAPI.post(languages);
     },
 
     German: (msg) => {
@@ -222,7 +222,7 @@ maxAPI.addHandlers({
         } else {
             remove_lang(languages, "German");
         }
-        maxAPI.post(languages);
+        // maxAPI.post(languages);
     },
 
     Spanish: (msg) => {
@@ -231,7 +231,7 @@ maxAPI.addHandlers({
         } else {
             remove_lang(languages, "Spanish");
         }
-        maxAPI.post(languages);
+        // maxAPI.post(languages);
     },
 
     Japanese: (msg) => {
@@ -240,6 +240,6 @@ maxAPI.addHandlers({
         } else {
             remove_lang(languages, "Japanese");
         }
-        maxAPI.post(languages);
+        // maxAPI.post(languages);
     },
 });
