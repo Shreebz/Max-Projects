@@ -1,0 +1,68 @@
+{
+	"pattrstorage" : 	{
+		"name" : "paths",
+		"slots" : 		{
+			"1" : 			{
+				"id" : 1,
+				"lock" : 1,
+				"data" : 				{
+					"destination" : [ "Destination", "folder" ],
+					"whitelist" : [ "Text", "file.txt" ],
+					"source" : [ "Source", "folder" ],
+					"preset_name" : [ "Enter preset name and description, and be organized!\nSave your preset after entering text" ],
+					"English_toggle" : [ 1 ],
+					"French_toggle" : [ 0 ],
+					"Italian_toggle" : [ 0 ],
+					"German_toggle" : [ 0 ],
+					"Spanish_toggle" : [ 0 ],
+					"Japanese_toggle" : [ 0 ],
+					"pattr_recall_English::pattrEnglish" : [ "English", 1 ],
+					"pattr_recall_French::pattr_French" : [ "French", 0 ],
+					"pattr_recall_Italian::pattr_Italian" : [ "Italian", 0 ],
+					"pattr_recall_German::pattr_German" : [ "German", 0 ],
+					"pattr_recall_Spanish::pattr_Spanish" : [ "Spanish", 0 ],
+					"pattr_recall_Spanish[1]::pattr_Spanish" : [ "Japanese", 0 ],
+					"win_or_mac[1]::mac_path_source" : [ "/Users/dschreiberjr/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/testfilesOneWhitelist/hello you/" ],
+					"win_or_mac[1]::win_path_source" : [ "/Users/dschreiberjr/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/testfilesOneWhitelist/hello you/" ],
+					"win_or_mac[4]::mac_path_text" : [ "/Volumes/test.txt/" ],
+					"win_or_mac[4]::win_path_text" : [ "/Volumes/test.txt/" ],
+					"win_or_mac[3]::mac_path_dest" : [ 0 ],
+					"win_or_mac[3]::win_path_dest" : [ 0 ]
+				}
+
+			}
+,
+			"4" : 			{
+				"id" : 4,
+				"data" : 				{
+					"destination" : [ "Destination", "folder" ],
+					"whitelist" : [ "Text", "file.txt" ],
+					"source" : [ "Source", "folder" ],
+					"preset_name" : [ "<empty>" ],
+					"English_toggle" : [ 0 ],
+					"French_toggle" : [ 0 ],
+					"Italian_toggle" : [ 1 ],
+					"German_toggle" : [ 0 ],
+					"Spanish_toggle" : [ 0 ],
+					"Japanese_toggle" : [ 0 ],
+					"pattr_recall_English::pattrEnglish" : [ "English", 0 ],
+					"pattr_recall_French::pattr_French" : [ "French", 0 ],
+					"pattr_recall_Italian::pattr_Italian" : [ "Italian", 1 ],
+					"pattr_recall_German::pattr_German" : [ "German", 0 ],
+					"pattr_recall_Spanish::pattr_Spanish" : [ "Spanish", 0 ],
+					"pattr_recall_Spanish[1]::pattr_Spanish" : [ "Japanese", 0 ],
+					"win_or_mac[1]::mac_path_source" : [ "/Users/dschreiberjr/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/testfilesOneWhitelist/hello you/" ],
+					"win_or_mac[1]::win_path_source" : [ "/Users/dschreiberjr/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/testfilesOneWhitelist/hello you/" ],
+					"win_or_mac[4]::mac_path_text" : [ "/Volumes/test.txt/" ],
+					"win_or_mac[4]::win_path_text" : [ "/Volumes/test.txt/" ],
+					"win_or_mac[3]::mac_path_dest" : [ 0 ],
+					"win_or_mac[3]::win_path_dest" : [ 0 ]
+				}
+
+			}
+
+		}
+
+	}
+
+}

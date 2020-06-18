@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 283.0, 79.0, 1265.0, 1015.0 ],
+		"rect" : [ 3634.0, 79.0, 1492.0, 967.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,16 +40,60 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"fontsize" : 20.0,
 					"id" : "obj-50",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 227.0, 1134.0, 100.0, 31.0 ],
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 30.0, 1256.0, 305.0, 20.0 ],
+					"text" : "How to make preset saving available to collective users"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-19",
+					"linecount" : 12,
+					"maxclass" : "textedit",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "int", "", "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 30.0, 1278.0, 420.0, 188.0 ],
+					"readonly" : 1,
+					"text" : "https://cycling74.com/forums/pattrstorage-doesnt-overwrite-preset-files-in-standalone\n\n1) Set \"fileusagemode\" = 1, for patternstorage.\n(also choose a proper \"savemode\", start with 1 for testing purpouses)\n\n2) If you have already created a .json just move it to another place then reload the .maxpat, it has to load with all pressets blank.\n\n3) Compile your standalone to an empty folder and put the previously moved .json file to that folder\nNow your pressets changes will be persistent."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bubblesize" : 30,
+					"fontsize" : 18.0,
+					"id" : "obj-72",
+					"maxclass" : "preset",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "preset", "int", "preset", "int" ],
+					"patching_rect" : [ 625.5, 1360.0, 175.0, 106.0 ],
+					"pattrstorage" : "paths"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bubble" : 1,
+					"bubbleside" : 2,
+					"fontname" : "Optima ExtraBlack",
+					"fontsize" : 18.0,
+					"id" : "obj-81",
+					"linecount" : 4,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1079.0, 117.0, 256.0, 114.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 940.0, 826.0, 100.0, 31.0 ],
-					"text" : "writeagain"
+					"presentation_linecount" : 4,
+					"presentation_rect" : [ 887.967033386230469, 191.75, 234.0, 114.0 ],
+					"text" : "Set:\n- Source folder\n- Destination folder\n- Text file"
 				}
 
 			}
@@ -60,20 +104,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 137.0, 1298.0, 50.0, 22.0 ],
+					"patching_rect" : [ 54.5, 1136.0, 50.0, 22.0 ],
 					"text" : "lock 1 1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-19",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 134.0, 1159.0, 34.0, 22.0 ],
-					"text" : "write"
 				}
 
 			}
@@ -294,7 +326,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 219.5, 1248.5, 152.0, 22.0 ],
+					"patching_rect" : [ 930.5, 1136.0, 152.0, 22.0 ],
 					"restore" : [ "Enter preset name and description, and be organized!\nSave your preset after entering text" ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
@@ -308,13 +340,12 @@
 			}
 , 			{
 				"box" : 				{
-					"autorestore" : "paths.json",
 					"id" : "obj-2",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 22.5, 1088.0, 186.0, 22.0 ],
+					"patching_rect" : [ 25.0, 1223.434837341308594, 290.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"client_rect" : [ 4, 44, 358, 172 ],
 						"parameter_enable" : 0,
@@ -322,7 +353,7 @@
 						"storage_rect" : [ 583, 69, 1034, 197 ]
 					}
 ,
-					"text" : "pattrstorage paths @savemode 3",
+					"text" : "pattrstorage paths @savemode 3 @fileusagemode 1",
 					"varname" : "paths"
 				}
 
@@ -354,7 +385,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 286.0, 1380.0, 325.0, 82.0 ],
+					"patching_rect" : [ 997.0, 1189.0, 325.0, 82.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
 					"presentation_rect" : [ 665.10711669921875, 754.5, 398.0, 65.69915771484375 ],
@@ -2827,7 +2858,7 @@
 					"patching_rect" : [ 696.0, 567.0, 211.0, 44.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 40.107147216796875, 463.366668701171875, 191.598358154296875, 44.0 ],
+					"presentation_rect" : [ 40.107147216796875, 502.071441650390625, 191.598358154296875, 44.0 ],
 					"text" : "Press to browse for destination folder",
 					"textjustification" : 1
 				}
@@ -2867,7 +2898,7 @@
 					"patching_rect" : [ 81.25, 81.0, 182.0, 44.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 40.107147216796875, 323.991836547851562, 191.598358154296875, 44.0 ],
+					"presentation_rect" : [ 40.107147216796875, 351.662246704101562, 191.598358154296875, 44.0 ],
 					"text" : "Press to browse for source folder",
 					"textjustification" : 1
 				}
@@ -2919,7 +2950,7 @@
 					"patching_rect" : [ 74.25, 428.451751708984375, 140.0, 44.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 39.752304077148438, 616.269866943359375, 191.953201293945312, 44.0 ],
+					"presentation_rect" : [ 39.752304077148438, 659.86663818359375, 191.953201293945312, 44.0 ],
 					"text" : "Press to browse for text file",
 					"textjustification" : 1
 				}
@@ -4449,10 +4480,10 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "preset", "int", "preset", "int" ],
-					"patching_rect" : [ 22.5, 925.0, 175.0, 106.0 ],
+					"patching_rect" : [ 27.5, 1056.434837341308594, 175.0, 106.0 ],
 					"pattrstorage" : "paths",
 					"presentation" : 1,
-					"presentation_rect" : [ 665.10711669921875, 861.0, 379.0, 108.0 ]
+					"presentation_rect" : [ 665.10711669921875, 864.0, 378.0, 106.5 ]
 				}
 
 			}
@@ -4494,7 +4525,7 @@
 					"patching_rect" : [ -10.5, 24.0, 341.0, 65.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 18.70550537109375, 98.410713195800781, 223.0, 65.0 ],
+					"presentation_rect" : [ 40.107147216796875, 115.75, 223.0, 65.0 ],
 					"text" : "Follow Steps 1-5\nin that order.",
 					"textcolor" : [ 0.996078431372549, 0.996078431372549, 0.996078431372549, 1.0 ],
 					"textjustification" : 1
@@ -4554,18 +4585,18 @@
 , 			{
 				"box" : 				{
 					"bubble" : 1,
-					"bubbleside" : 0,
+					"bubbleside" : 3,
 					"fontname" : "Optima ExtraBlack",
-					"fontsize" : 18.0,
+					"fontsize" : 16.0,
 					"id" : "obj-60",
-					"linecount" : 5,
+					"linecount" : 4,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1333.0, 342.5, 300.0, 136.0 ],
+					"patching_rect" : [ 1333.0, 342.5, 307.0, 89.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 3,
-					"presentation_rect" : [ 378.75469970703125, 201.821426391601562, 355.0, 92.0 ],
+					"presentation_rect" : [ 326.75469970703125, 217.321426391601562, 326.0, 69.0 ],
 					"text" : "- Create a text file outside of this app.\n- One filename per line.\n- Parent folder name in brackets."
 				}
 
@@ -4583,7 +4614,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 306.96429443359375, 104.321426391601562, 130.140350341796875, 36.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 256.25469970703125, 182.75, 92.0, 36.0 ],
+					"presentation_rect" : [ 326.75469970703125, 182.75, 92.0, 36.0 ],
 					"text" : "Step 2:"
 				}
 
@@ -4602,7 +4633,7 @@
 					"patching_rect" : [ 476.96429443359375, 646.821426391601562, 130.140350341796875, 36.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 554.10711669921875, 746.622268676757812, 92.0, 36.0 ],
-					"text" : "Step 5"
+					"text" : "Step 5:"
 				}
 
 			}
@@ -4616,7 +4647,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 889.83050537109375, 1088.0, 281.0, 60.0 ],
+					"patching_rect" : [ 882.83050537109375, 1056.434837341308594, 281.0, 60.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 355.60711669921875, 433.99090576171875, 364.0, 33.0 ],
 					"text" : "Example: .../Desktop/Destination",
@@ -4637,7 +4668,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 1438.96429443359375, 308.821426391601562, 130.140350341796875, 36.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 1223.96429443359375, 182.75, 92.0, 36.0 ],
+					"presentation_rect" : [ 1219.607131958007812, 182.75, 92.0, 36.0 ],
 					"text" : "Step 4:"
 				}
 
@@ -4673,7 +4704,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 114.607147216796875, 37.821426391601562, 130.140350341796875, 36.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 116.107147216796875, 182.75, 92.0, 36.0 ],
+					"presentation_rect" : [ 94.107147216796875, 182.75, 92.0, 36.0 ],
 					"text" : "Step 1:"
 				}
 
@@ -4690,7 +4721,7 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 616.0, 199.0, 179.0, 92.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 40.107147216796875, 290.1622314453125, 1098.999969482421875, 105.500015258789062 ],
+					"presentation_rect" : [ 40.107147216796875, 288.321426391601562, 1098.999969482421875, 107.3408203125 ],
 					"varname" : "Source_dropfile"
 				}
 
@@ -5096,7 +5127,7 @@
 					"patching_rect" : [ 1067.052001953125, 456.947371602058411, 325.0, 55.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 1195.60711669921875, 225.821426391601562, 194.500030517578125, 84.0 ],
+					"presentation_rect" : [ 1168.35711669921875, 221.519230769230774, 194.500030517578125, 84.0 ],
 					"text" : "Select desired languages",
 					"textjustification" : 1
 				}
@@ -5113,25 +5144,6 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 355.60711669921875, 750.0, 174.521926879882812, 20.0 ],
 					"text" : "Press Copy button to copy files"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bubble" : 1,
-					"bubbleside" : 2,
-					"fontname" : "Optima ExtraBlack",
-					"fontsize" : 24.0,
-					"id" : "obj-81",
-					"linecount" : 4,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1079.0, 117.0, 336.0, 143.0 ],
-					"presentation" : 1,
-					"presentation_linecount" : 4,
-					"presentation_rect" : [ 891.967033386230469, 143.321426391601562, 307.0, 143.0 ],
-					"text" : "Set:\n- Source folder\n- Destination folder\n- Text file"
 				}
 
 			}
@@ -5166,7 +5178,7 @@
 					"patching_rect" : [ 1063.052001953125, 24.0, 136.0, 99.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 99.607147216796875, 225.821426391601562, 197.0, 69.0 ],
+					"presentation_rect" : [ 94.107147216796875, 217.321426391601562, 197.0, 69.0 ],
 					"text" : "Make sure this is on",
 					"textjustification" : 1
 				}
@@ -5474,6 +5486,8 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
 						"watch" : 1
 					}
 ,
@@ -5559,7 +5573,7 @@
 					"patching_rect" : [ 16.018805742263794, 0.236843109130859, 278.0, 87.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 233.70550537109375, 300.821426391601562, 625.0, 33.0 ],
-					"text" : "Example: .../Language/Folder/Project/SourceFolder",
+					"text" : "Example: .../Language/Folder1/Folder2/SourceFolder",
 					"textjustification" : 1
 				}
 
@@ -5608,7 +5622,7 @@
 					"patching_rect" : [ 1898.0, 370.678558349609375, 100.0, 289.743589743589723 ],
 					"pic" : "Macintosh HD:/Users/dschreiberjr/Desktop/Screen Shot 2020-06-13 at 7.58.09 PM.png",
 					"presentation" : 1,
-					"presentation_rect" : [ 505.25469970703125, 7.282964853140015, 102.0, 295.538461538461547 ]
+					"presentation_rect" : [ 658.75469970703125, 115.75, 102.0, 295.538461538461547 ]
 				}
 
 			}
@@ -6079,13 +6093,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"source" : [ "obj-19", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-55", 0 ],
 					"source" : [ "obj-20", 0 ]
 				}
@@ -6392,13 +6399,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"source" : [ "obj-50", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-15", 0 ],
 					"order" : 0,
 					"source" : [ "obj-52", 0 ]
@@ -6553,6 +6553,78 @@
 					"destination" : [ "obj-218", 0 ],
 					"order" : 1,
 					"source" : [ "obj-71", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-221", 0 ],
+					"order" : 4,
+					"source" : [ "obj-72", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-222", 0 ],
+					"order" : 3,
+					"source" : [ "obj-72", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-223", 0 ],
+					"order" : 0,
+					"source" : [ "obj-72", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-224", 0 ],
+					"order" : 5,
+					"source" : [ "obj-72", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-225", 0 ],
+					"order" : 2,
+					"source" : [ "obj-72", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-226", 0 ],
+					"order" : 1,
+					"source" : [ "obj-72", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-57", 0 ],
+					"order" : 7,
+					"source" : [ "obj-72", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-75", 0 ],
+					"order" : 6,
+					"source" : [ "obj-72", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-76", 0 ],
+					"order" : 8,
+					"source" : [ "obj-72", 0 ]
 				}
 
 			}
@@ -6771,13 +6843,6 @@
 				"bootpath" : "~/Documents/GitHub/Max-Projects/File_Grabber/Project/File Grabber/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "paths.json",
-				"bootpath" : "~/Documents/GitHub/Max-Projects/File_Grabber/Project/File Grabber/patchers/Media",
-				"patcherrelativepath" : "./Media",
-				"type" : "JSON",
 				"implicit" : 1
 			}
  ],
