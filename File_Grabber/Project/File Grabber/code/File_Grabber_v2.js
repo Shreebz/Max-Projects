@@ -6,7 +6,7 @@ const maxAPI = require('max-api');
 const os = require('os');
 
 // Configuration
-const ftype_to_copy = ".wav" // File type to copy
+const ftype_to_copy = ".mp3" // File type to copy
 var whitelist_location; // A whitelist.txt file
 var source_proj_dir; // This is proj directory
 var destination_directory; // Destination folder
@@ -55,6 +55,7 @@ function copy_files(from, to, base_folder2, audio_file) {
                 // console.log("Source: " + from2)
                 maxAPI.post("Source: " + from2)
                 maxAPI.post("Destin: " + to2)
+                maxAPI.outlet("files " + to2);
                 // console.log("Destin: " + to2)
             }
         })
@@ -98,7 +99,8 @@ function dest_path_splicer(language, path_to_split) {
 function logInfo() {
     // console.log("Callback function executed");
     maxAPI.post("Dance! Finished copying.");
-    maxAPI.outlet("Dance!");
+    // maxAPI.outlet("reset");
+    // maxAPI.outlet("Dance!");
     // maxAPI.outletBang();
 }
 
@@ -182,6 +184,7 @@ maxAPI.addHandlers({
         maxAPI.post("Source directory is " + source_proj_dir);
         maxAPI.post("Whitelist location is " + whitelist_location);
         maxAPI.post("Destination directory is " + destination_directory);
+        // maxAPI.outlet("reset");
         if (languages.length > 0) {
             maxAPI.post("Languages: " + languages + " ");
         } else {
