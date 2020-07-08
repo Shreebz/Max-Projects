@@ -6,7 +6,7 @@ const maxAPI = require('max-api');
 const os = require('os');
 
 // Configuration
-const ftype_to_copy = ".mp3" // File type to copy
+const ftype_to_copy = ".wav" // File type to copy
 var whitelist_location; // A whitelist.txt file
 var source_proj_dir; // This is proj directory
 var destination_directory; // Destination folder
