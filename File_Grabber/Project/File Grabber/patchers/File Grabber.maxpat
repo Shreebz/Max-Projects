@@ -753,15 +753,7 @@
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 536.0, 225.0, 55.0, 22.0 ],
 													"restore" : [ 														{
-															"0" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/hello you/English/files/001.mp3" ],
-															"1" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/hello you/English/files/002.mp3" ],
-															"2" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/hello you/English/files/003.mp3" ],
-															"3" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/hello you/English/files/004.mp3" ],
-															"4" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/hello you/English/files/005.mp3" ],
-															"5" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/hello you/English/files2/004.mp3" ],
-															"6" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/hello you/English/files2/007.mp3" ],
-															"7" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/hello you/English/files2/011.mp3" ],
-															"8" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/hello you/English/files2/015.mp3" ]
+															"0" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/hello you/English/files/002.mp3" ]
 														}
  ],
 													"saved_object_attributes" : 													{
@@ -777,15 +769,7 @@
 , 											{
 												"box" : 												{
 													"data" : 													{
-														"0" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/hello you/English/files/001.mp3" ],
-														"1" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/hello you/English/files/002.mp3" ],
-														"2" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/hello you/English/files/003.mp3" ],
-														"3" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/hello you/English/files/004.mp3" ],
-														"4" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/hello you/English/files/005.mp3" ],
-														"5" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/hello you/English/files2/004.mp3" ],
-														"6" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/hello you/English/files2/007.mp3" ],
-														"7" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/hello you/English/files2/011.mp3" ],
-														"8" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/hello you/English/files2/015.mp3" ]
+														"0" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/hello you/English/files/002.mp3" ]
 													}
 ,
 													"id" : "obj-11",
@@ -869,42 +853,10 @@
 , 											{
 												"box" : 												{
 													"coll_data" : 													{
-														"count" : 9,
+														"count" : 1,
 														"data" : [ 															{
 																"key" : "0",
-																"value" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/hello you/English/files/001.mp3" ]
-															}
-, 															{
-																"key" : "1",
 																"value" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/hello you/English/files/002.mp3" ]
-															}
-, 															{
-																"key" : "2",
-																"value" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/hello you/English/files/003.mp3" ]
-															}
-, 															{
-																"key" : "3",
-																"value" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/hello you/English/files/004.mp3" ]
-															}
-, 															{
-																"key" : "4",
-																"value" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/hello you/English/files/005.mp3" ]
-															}
-, 															{
-																"key" : "5",
-																"value" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/hello you/English/files2/004.mp3" ]
-															}
-, 															{
-																"key" : "6",
-																"value" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/hello you/English/files2/007.mp3" ]
-															}
-, 															{
-																"key" : "7",
-																"value" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/hello you/English/files2/011.mp3" ]
-															}
-, 															{
-																"key" : "8",
-																"value" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/hello you/English/files2/015.mp3" ]
 															}
  ]
 													}
@@ -1595,7 +1547,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 25.0, 1223.434837341308594, 290.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 4, 79, 358, 207 ],
+						"client_rect" : [ 4, 79, 1225, 840 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
 						"storage_rect" : [ 583, 69, 1034, 197 ]
@@ -2871,7 +2823,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 225.0, 463.0, 173.0, 22.0 ],
-									"restore" : [ "/Users/dschreiberjr/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/testfilesOneWhitelist/hello you/" ],
+									"restore" : [ "text" ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0,
 										"parameter_mappable" : 0
@@ -2890,7 +2842,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 667.5, 442.0, 177.0, 22.0 ],
-									"restore" : [ "/Users/dschreiberjr/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/testfilesOneWhitelist/hello you/" ],
+									"restore" : [ "text" ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0,
 										"parameter_mappable" : 0
@@ -3044,8 +2996,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 92.0, 739.0, 793.0, 22.0 ],
-									"text" : "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/1-source/English/3Raw/Project/"
+									"patching_rect" : [ 92.0, 739.0, 793.0, 22.0 ]
 								}
 
 							}
@@ -6654,8 +6605,6 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
-						"node_bin_path" : "",
-						"npm_bin_path" : "",
 						"watch" : 1
 					}
 ,
