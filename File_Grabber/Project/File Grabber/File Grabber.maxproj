@@ -2,7 +2,7 @@
 	"name" : "File Grabber",
 	"version" : 1,
 	"creationdate" : 3673260404,
-	"modificationdate" : 3677055404,
+	"modificationdate" : 3678039257,
 	"viewrect" : [ 1620.0, 280.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -15,6 +15,11 @@
 				"local" : 1,
 				"toplevel" : 1
 			}
+,
+			"Recorder_Playground.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
 
 		}
 ,
@@ -23,6 +28,10 @@
 		}
 ,
 		"code" : 		{
+			"dict_test.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
 
 		}
 
