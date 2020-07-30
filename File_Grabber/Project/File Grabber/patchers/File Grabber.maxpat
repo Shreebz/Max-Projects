@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 82.0, 95.0, 1793.0, 970.0 ],
+		"rect" : [ 82.0, 95.0, 1313.0, 970.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,17 @@
 		"showontab" : 1,
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-22",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 769.0, 1229.0, 53.0, 22.0 ],
+					"text" : "print coll"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-109",
 					"maxclass" : "newobj",
@@ -241,7 +252,7 @@
 , 							{
 								"box" : 								{
 									"data" : 									{
-										"destin_dir" : "destination"
+
 									}
 ,
 									"id" : "obj-25",
@@ -750,7 +761,7 @@
 , 							{
 								"box" : 								{
 									"data" : 									{
-										"source_dir" : "source"
+
 									}
 ,
 									"id" : "obj-25",
@@ -2404,7 +2415,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 50.0, 238.5, 336.0, 22.0 ],
-									"restore" : [ "destination folder" ],
+									"restore" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/2-destination/" ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0,
 										"parameter_mappable" : 0
@@ -3249,7 +3260,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 162.0, 215.654457092285156, 292.0, 22.0 ],
-									"restore" : [ "source folder" ],
+									"restore" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/1-source/English/3Raw/Project/" ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0,
 										"parameter_mappable" : 0
@@ -4349,7 +4360,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 1793.0, 944.0 ],
+						"rect" : [ 82.0, 121.0, 1313.0, 944.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 1,
 						"default_fontsize" : 12.0,
@@ -4380,6 +4391,69 @@
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-13",
+									"maxclass" : "toggle",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "int" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 754.0, 605.0, 24.0, 24.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-11",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 0,
+									"patching_rect" : [ 754.0, 665.0, 35.0, 22.0 ],
+									"text" : "dac~"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-8",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "bang", "bang" ],
+									"patching_rect" : [ 759.0, 252.0, 32.0, 22.0 ],
+									"text" : "t b b"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-7",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 851.0, 177.0, 183.0, 20.0 ],
+									"presentation" : 1,
+									"presentation_rect" : [ 696.0, 202.181495308876038, 183.0, 20.0 ],
+									"text" : "Only works with files just copied"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontsize" : 24.0,
+									"id" : "obj-4",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 684.0, 166.0, 145.0, 35.0 ],
+									"presentation" : 1,
+									"presentation_rect" : [ 544.600009202957153, 187.181495308876038, 145.0, 35.0 ],
+									"text" : "Load Playlist"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-20",
 									"maxclass" : "newobj",
 									"numinlets" : 4,
@@ -4396,7 +4470,7 @@
 										}
 ,
 										"classnamespace" : "box",
-										"rect" : [ 781.0, 340.0, 640.0, 480.0 ],
+										"rect" : [ 771.0, 261.0, 461.0, 480.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -4431,7 +4505,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "dump", "clear" ],
-													"patching_rect" : [ 227.600002646446228, 152.000000774860382, 75.0, 22.0 ],
+													"patching_rect" : [ 262.600010440040592, 152.000000774860382, 75.0, 22.0 ],
 													"text" : "t dump clear"
 												}
 
@@ -4793,7 +4867,7 @@
 														}
 ,
 														"classnamespace" : "box",
-														"rect" : [ 48.0, 145.0, 875.0, 738.0 ],
+														"rect" : [ 48.0, 145.0, 1222.0, 711.0 ],
 														"bglocked" : 0,
 														"openinpresentation" : 0,
 														"default_fontsize" : 12.0,
@@ -4851,7 +4925,7 @@
 																	"maxclass" : "dict.view",
 																	"numinlets" : 1,
 																	"numoutlets" : 0,
-																	"patching_rect" : [ 398.40000593662262, 350.400005221366882, 468.800005495548248, 220.000001788139343 ]
+																	"patching_rect" : [ 554.0, 351.400005221366882, 468.800005495548248, 220.000001788139343 ]
 																}
 
 															}
@@ -4937,7 +5011,13 @@
 																	"outlettype" : [ "", "", "" ],
 																	"patching_rect" : [ 536.0, 225.0, 55.0, 22.0 ],
 																	"restore" : [ 																		{
-
+																			"0" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/2-destination/English/folder/001.mp3" ],
+																			"1" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/2-destination/English/folder/002.mp3" ],
+																			"2" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/2-destination/English/folder/003.mp3" ],
+																			"3" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/2-destination/English/folder/004.mp3" ],
+																			"4" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/2-destination/English/folder/005.mp3" ],
+																			"5" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/2-destination/English/folder2/008.mp3" ],
+																			"6" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/2-destination/English/folder2/009.mp3" ]
 																		}
  ],
 																	"saved_object_attributes" : 																	{
@@ -4953,7 +5033,13 @@
 , 															{
 																"box" : 																{
 																	"data" : 																	{
-
+																		"0" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/2-destination/English/folder/001.mp3" ],
+																		"1" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/2-destination/English/folder/002.mp3" ],
+																		"2" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/2-destination/English/folder/003.mp3" ],
+																		"3" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/2-destination/English/folder/004.mp3" ],
+																		"4" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/2-destination/English/folder/005.mp3" ],
+																		"5" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/2-destination/English/folder2/008.mp3" ],
+																		"6" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/2-destination/English/folder2/009.mp3" ]
 																	}
 ,
 																	"id" : "obj-11",
@@ -4993,7 +5079,7 @@
 																	"maxclass" : "outlet",
 																	"numinlets" : 1,
 																	"numoutlets" : 0,
-																	"patching_rect" : [ 325.0, 394.0, 30.0, 30.0 ]
+																	"patching_rect" : [ 421.0, 394.0, 30.0, 30.0 ]
 																}
 
 															}
@@ -5037,8 +5123,36 @@
 , 															{
 																"box" : 																{
 																	"coll_data" : 																	{
-																		"count" : 0,
-																		"data" : [  ]
+																		"count" : 7,
+																		"data" : [ 																			{
+																				"key" : 0,
+																				"value" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/2-destination/English/folder/001.mp3" ]
+																			}
+, 																			{
+																				"key" : 1,
+																				"value" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/2-destination/English/folder/002.mp3" ]
+																			}
+, 																			{
+																				"key" : 2,
+																				"value" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/2-destination/English/folder/003.mp3" ]
+																			}
+, 																			{
+																				"key" : 3,
+																				"value" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/2-destination/English/folder/004.mp3" ]
+																			}
+, 																			{
+																				"key" : 4,
+																				"value" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/2-destination/English/folder/005.mp3" ]
+																			}
+, 																			{
+																				"key" : 5,
+																				"value" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/2-destination/English/folder2/008.mp3" ]
+																			}
+, 																			{
+																				"key" : 6,
+																				"value" : [ "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/2-destination/English/folder2/009.mp3" ]
+																			}
+ ]
 																	}
 ,
 																	"id" : "obj-1",
@@ -5246,7 +5360,7 @@
 													"numinlets" : 0,
 													"numoutlets" : 1,
 													"outlettype" : [ "bang" ],
-													"patching_rect" : [ 183.000004440040584, 40.000005566772472, 30.0, 30.0 ]
+													"patching_rect" : [ 218.000004440040584, 40.000005566772472, 30.0, 30.0 ]
 												}
 
 											}
@@ -5259,7 +5373,7 @@
 													"numinlets" : 0,
 													"numoutlets" : 1,
 													"outlettype" : [ "bang" ],
-													"patching_rect" : [ 227.600010440040592, 40.000005566772472, 30.0, 30.0 ]
+													"patching_rect" : [ 262.600010440040592, 40.000005566772472, 30.0, 30.0 ]
 												}
 
 											}
@@ -5271,7 +5385,7 @@
 													"maxclass" : "outlet",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 208.993504440040567, 352.800008566772476, 30.0, 30.0 ]
+													"patching_rect" : [ 202.387033343315125, 353.800008566772476, 30.0, 30.0 ]
 												}
 
 											}
@@ -5384,10 +5498,10 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 462.803713649511337, 234.0, 150.0, 20.0 ],
+									"patching_rect" : [ 851.0, 150.0, 158.0, 20.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 258.999999463558197, 143.800000131130219, 161.0, 20.0 ],
-									"text" : "click to load files to playlist"
+									"presentation_rect" : [ 696.0, 172.981495440006256, 161.0, 20.0 ],
+									"text" : "Click to load files to playlist"
 								}
 
 							}
@@ -5401,7 +5515,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 577.100008904933929, 278.400003433227539, 61.0, 35.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 555.600009202957153, 240.800004422664642, 61.0, 35.0 ],
+									"presentation_rect" : [ 544.600009202957153, 240.800004422664642, 61.0, 35.0 ],
 									"text" : "clear"
 								}
 
@@ -5414,9 +5528,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 514.994459092617035, 267.781494319438934, 45.618509113788605, 45.618509113788605 ],
-									"presentation" : 1,
-									"presentation_rect" : [ 295.200003385543823, 187.181495308876038, 88.618509113788605, 88.618509113788605 ]
+									"patching_rect" : [ 514.994459092617035, 267.781494319438934, 45.618509113788605, 45.618509113788605 ]
 								}
 
 							}
@@ -5462,7 +5574,86 @@
 									"basictuning" : 0,
 									"clipheight" : 23.222221758630539,
 									"data" : 									{
-										"clips" : [  ]
+										"clips" : [ 											{
+												"absolutepath" : "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/2-destination/English/folder/001.mp3",
+												"filename" : "001.mp3",
+												"filekind" : "audiofile",
+												"id" : "u263005324",
+												"loop" : 0,
+												"content_state" : 												{
+
+												}
+
+											}
+, 											{
+												"absolutepath" : "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/2-destination/English/folder/002.mp3",
+												"filename" : "002.mp3",
+												"filekind" : "audiofile",
+												"id" : "u522005327",
+												"loop" : 0,
+												"content_state" : 												{
+
+												}
+
+											}
+, 											{
+												"absolutepath" : "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/2-destination/English/folder/003.mp3",
+												"filename" : "003.mp3",
+												"filekind" : "audiofile",
+												"id" : "u645005330",
+												"selection" : [ 0.921428571428571, 0.945238095238095 ],
+												"loop" : 0,
+												"content_state" : 												{
+
+												}
+
+											}
+, 											{
+												"absolutepath" : "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/2-destination/English/folder/004.mp3",
+												"filename" : "004.mp3",
+												"filekind" : "audiofile",
+												"id" : "u269005333",
+												"loop" : 0,
+												"content_state" : 												{
+
+												}
+
+											}
+, 											{
+												"absolutepath" : "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/2-destination/English/folder/005.mp3",
+												"filename" : "005.mp3",
+												"filekind" : "audiofile",
+												"id" : "u724005336",
+												"loop" : 0,
+												"content_state" : 												{
+
+												}
+
+											}
+, 											{
+												"absolutepath" : "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/2-destination/English/folder2/008.mp3",
+												"filename" : "008.mp3",
+												"filekind" : "audiofile",
+												"id" : "u689005339",
+												"selection" : [ 0.161904761904762, 0.990476190476191 ],
+												"loop" : 0,
+												"content_state" : 												{
+
+												}
+
+											}
+, 											{
+												"absolutepath" : "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/2-destination/English/folder2/009.mp3",
+												"filename" : "009.mp3",
+												"filekind" : "audiofile",
+												"id" : "u400005342",
+												"loop" : 0,
+												"content_state" : 												{
+
+												}
+
+											}
+ ]
 									}
 ,
 									"expansion" : "static",
@@ -5555,6 +5746,13 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
+									"destination" : [ "obj-11", 0 ],
+									"source" : [ "obj-13", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-18", 0 ],
 									"source" : [ "obj-16", 0 ]
 								}
@@ -5625,6 +5823,13 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-8", 0 ],
+									"source" : [ "obj-4", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-3", 0 ],
 									"source" : [ "obj-40", 0 ]
 								}
@@ -5641,6 +5846,20 @@
 								"patchline" : 								{
 									"destination" : [ "obj-33", 0 ],
 									"source" : [ "obj-6", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-13", 0 ],
+									"source" : [ "obj-8", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-29", 0 ],
+									"source" : [ "obj-8", 0 ]
 								}
 
 							}
@@ -5874,7 +6093,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 25.0, 1223.434837341308594, 290.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 154, 137, 1093, 1020 ],
+						"client_rect" : [ 4, 44, 358, 172 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
 						"storage_rect" : [ 583, 69, 1034, 197 ]
@@ -6003,7 +6222,8 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 650.5, 1135.0, 135.0, 49.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 304.107147216796875, 669.69915771484375, 127.0, 49.0 ]
+					"presentation_rect" : [ 304.107147216796875, 669.69915771484375, 127.0, 49.0 ],
+					"text" : "Dance!"
 				}
 
 			}
@@ -8401,7 +8621,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 304.107147216796875, 426.821441650390625, 1098.999969482421875, 24.0 ],
 					"tabmode" : 0,
-					"text" : "\"source folder\"",
+					"text" : "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/1-source/English/3Raw/Project/",
 					"varname" : "textedit_source"
 				}
 
@@ -8424,7 +8644,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 304.107147216796875, 643.3214111328125, 1098.999984741210938, 22.0 ],
 					"tabmode" : 0,
-					"text" : "\"destination folder\"",
+					"text" : "/Users/dschreiberjr/Downloads/testfilesOneWhitelist/2-destination/",
 					"varname" : "textedit_destination"
 				}
 
@@ -8910,6 +9130,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
+					"order" : 1,
+					"source" : [ "obj-105", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-53", 1 ],
+					"order" : 0,
 					"source" : [ "obj-105", 1 ]
 				}
 
@@ -8931,6 +9160,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
+					"order" : 1,
+					"source" : [ "obj-113", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-58", 1 ],
+					"order" : 0,
 					"source" : [ "obj-113", 1 ]
 				}
 
@@ -9616,15 +9854,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-157", 0 ],
-					"order" : 1,
-					"source" : [ "obj-75", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-58", 1 ],
-					"order" : 0,
 					"source" : [ "obj-75", 0 ]
 				}
 
@@ -9632,15 +9861,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-157", 0 ],
-					"order" : 1,
-					"source" : [ "obj-76", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-53", 1 ],
-					"order" : 0,
 					"source" : [ "obj-76", 0 ]
 				}
 
@@ -9737,6 +9957,14 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-22", 0 ],
+					"order" : 2,
+					"source" : [ "obj-94", 4 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
 					"order" : 0,
 					"source" : [ "obj-94", 4 ]
@@ -9808,6 +10036,55 @@
 				"bootpath" : "~/Documents/GitHub/Max-Projects/File_Grabber/Project/File Grabber/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "001.mp3",
+				"bootpath" : "~/Downloads/testfilesOneWhitelist/2-destination/English/folder",
+				"patcherrelativepath" : "../../../../../../../Downloads/testfilesOneWhitelist/2-destination/English/folder",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "002.mp3",
+				"bootpath" : "~/Downloads/testfilesOneWhitelist/2-destination/English/folder",
+				"patcherrelativepath" : "../../../../../../../Downloads/testfilesOneWhitelist/2-destination/English/folder",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "003.mp3",
+				"bootpath" : "~/Downloads/testfilesOneWhitelist/2-destination/English/folder",
+				"patcherrelativepath" : "../../../../../../../Downloads/testfilesOneWhitelist/2-destination/English/folder",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "004.mp3",
+				"bootpath" : "~/Downloads/testfilesOneWhitelist/2-destination/English/folder",
+				"patcherrelativepath" : "../../../../../../../Downloads/testfilesOneWhitelist/2-destination/English/folder",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "005.mp3",
+				"bootpath" : "~/Downloads/testfilesOneWhitelist/2-destination/English/folder",
+				"patcherrelativepath" : "../../../../../../../Downloads/testfilesOneWhitelist/2-destination/English/folder",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "008.mp3",
+				"bootpath" : "~/Downloads/testfilesOneWhitelist/2-destination/English/folder2",
+				"patcherrelativepath" : "../../../../../../../Downloads/testfilesOneWhitelist/2-destination/English/folder2",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "009.mp3",
+				"bootpath" : "~/Downloads/testfilesOneWhitelist/2-destination/English/folder2",
+				"patcherrelativepath" : "../../../../../../../Downloads/testfilesOneWhitelist/2-destination/English/folder2",
+				"type" : "Mp3",
 				"implicit" : 1
 			}
  ],

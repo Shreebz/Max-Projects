@@ -176,6 +176,7 @@ function format_and_copy_files(from, to, folder_list, audio_file) {
             if (fs.existsSync(from2)) {
                 // Copy the files with the function
                 create_path_and_copy_files(from2, to2)
+                maxAPI.outlet("files " + to2);
                 // maxAPI.post("Source_if: " + from)
                 // maxAPI.post("Destin_if: " + to2)
             }
@@ -266,7 +267,7 @@ async function iterator(dict) {
 }
 
 maxAPI.addHandlers({
-    Main: () => {
+    Main: async () => {
         // retrieveWhitelist(whitelist_location, dance_function);
         maxAPI.post("~~~~~~~~");
         dict_list_iterator();
@@ -285,27 +286,27 @@ maxAPI.addHandlers({
         maxAPI.outlet(hey);
     },
     // Choose source folder, and format
-    max_source: (msg) => {
+    max_source: async (msg) => {
         source_directory = remove_quotes(msg);
         // maxAPI.post("OS is " + operating_system);
         // maxAPI.post("Source directory is " + source_directory);
     },
     // Choose output directory, and format
-    max_dest: (msg) => {
+    max_dest: async (msg) => {
         destination_directory = remove_quotes(msg);
         // maxAPI.post("Destination directory is " + destination_directory);
     },
     // External whitelist text file
-    max_list: (msg) => {
+    max_list: async (msg) => {
         whitelist_location = remove_quotes(msg);
         // maxAPI.post("Whitelist location is " + whitelist_location);
     },
 
-    connected: (msg) => {
+    connected: async (msg) => {
         maxAPI.post(msg);
     },
 
-    debug: (msg) => {
+    debug: async (msg) => {
         maxAPI.post("OS is " + operating_system);
         maxAPI.post("Source directory is " + source_directory);
         // maxAPI.post("Whitelist location is " + whitelist_location);
