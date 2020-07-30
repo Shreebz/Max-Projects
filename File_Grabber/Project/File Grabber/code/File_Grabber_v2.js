@@ -55,6 +55,7 @@ function copy_files(from, to, base_folder2, audio_file) {
                 // console.log("Source: " + from2)
                 maxAPI.post("Source: " + from2)
                 maxAPI.post("Destin: " + to2)
+                maxAPI.outlet("files " + to2);
                 // console.log("Destin: " + to2)
             }
         })
@@ -78,7 +79,7 @@ function create_path_and_copy_files(from, to) {
 function source_path_splicer(language, path_to_split){
     // Split path so that it can be spliced (folders separated to individual variables)
     folders = path_to_split.split(path.sep);
-
+    maxAPI.post("Splitish: " + path_to_split);
     [lang, raw, proj, base_folder2] = folders.splice(-5);
     return path.join(language, raw, proj, base_folder2)
     // Split up the folders in the path
@@ -98,7 +99,8 @@ function dest_path_splicer(language, path_to_split) {
 function logInfo() {
     // console.log("Callback function executed");
     maxAPI.post("Dance! Finished copying.");
-    maxAPI.outlet("Dance!");
+    // maxAPI.outlet("reset");
+    // maxAPI.outlet("Dance!");
     // maxAPI.outletBang();
 }
 
@@ -158,18 +160,18 @@ maxAPI.addHandlers({
         retrieveWhitelist(whitelist_location, logInfo);
     },
     // Choose source folder, and format
-    $source: (msg) => {
+    max_source: (msg) => {
         source_proj_dir = remove_quotes(msg);
         maxAPI.post("OS is " + operating_system);
         maxAPI.post("Source directory is " + source_proj_dir);
     },
     // Choose output directory, and format
-    $dest: (msg) => {
+    max_dest: (msg) => {
         destination_directory = remove_quotes(msg);
         maxAPI.post("Destination directory is " + destination_directory);
     },
     // Choose whitelist
-    $list: (msg) => {
+    max_list: (msg) => {
         whitelist_location = remove_quotes(msg);
         maxAPI.post("Whitelist location is " + whitelist_location);
     },
@@ -182,6 +184,7 @@ maxAPI.addHandlers({
         maxAPI.post("Source directory is " + source_proj_dir);
         maxAPI.post("Whitelist location is " + whitelist_location);
         maxAPI.post("Destination directory is " + destination_directory);
+        // maxAPI.outlet("reset");
         if (languages.length > 0) {
             maxAPI.post("Languages: " + languages + " ");
         } else {
