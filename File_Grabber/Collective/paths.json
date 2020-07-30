@@ -6,9 +6,6 @@
 				"id" : 1,
 				"lock" : 1,
 				"data" : 				{
-					"destination" : [ "Destination", "folder" ],
-					"whitelist" : [ "Text", "file.txt" ],
-					"source" : [ "Source", "folder" ],
 					"preset_name" : [ "Enter preset name and description, and be organized!\nSave your preset after entering text" ],
 					"English_toggle" : [ 1 ],
 					"French_toggle" : [ 0 ],
@@ -22,12 +19,17 @@
 					"pattr_recall_German::pattr_German" : [ "German", 0 ],
 					"pattr_recall_Spanish::pattr_Spanish" : [ "Spanish", 0 ],
 					"pattr_recall_Spanish[1]::pattr_Spanish" : [ "Japanese", 0 ],
-					"win_or_mac[1]::mac_path_source" : [ "/Users/dschreiberjr/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/testfilesOneWhitelist/hello you/" ],
-					"win_or_mac[1]::win_path_source" : [ "/Users/dschreiberjr/Google Drive/1-DTS Programming/1-Max and Node JS/File_Grabber/testfilesOneWhitelist/hello you/" ],
-					"win_or_mac[4]::mac_path_text" : [ "/Volumes/test.txt/" ],
-					"win_or_mac[4]::win_path_text" : [ "/Volumes/test.txt/" ],
-					"win_or_mac[3]::mac_path_dest" : [ 0 ],
-					"win_or_mac[3]::win_path_dest" : [ 0 ]
+					"list_of_files::patcher::coll::dict" : [  ],
+					"patcher::whitelist" : [  ],
+					"patcher::win_or_mac[4]::mac_path_text" : [  ],
+					"patcher::win_or_mac[4]::win_path_text" : [  ],
+					"patcher[1]::source" : [  ],
+					"patcher[1]::win_or_mac[1]::mac_path_source" : [  ],
+					"patcher[1]::win_or_mac[1]::win_path_source" : [  ],
+					"patcher[2]::destination" : [  ],
+					"patcher[2]::win_or_mac[3]::mac_path_dest" : [  ],
+					"patcher[2]::win_or_mac[3]::win_path_dest" : [  ],
+					"textedit_list" : [  ]
 				}
 
 			}

@@ -226,28 +226,43 @@ async function dict_list_iterator() {
 }
 
 
-async function dict_dir_source_iterator() {
+dict_dir_source_iterator = async function() {
     dict = await maxAPI.getDict(dict_source_dir_max);
-    for (let key in dict) {
-        // maxAPI.post(`Source dict is ${key} with key ${dict[key]}`);
-        return dict[key];
-    }
+    return new Promise(function(resolve, reject) {
+        for (let key in dict) {
+            // maxAPI.post(`Source dict is ${key} with key ${dict[key]}`);
+            resolve(dict[key]);
+        }
+    });
 }
 
-async function dict_dir_destin_iterator() {
+var dict_dir_destin_iterator = async function() {
     dict = await maxAPI.getDict(dict_destin_dir_max);
-    for (let key in dict) {
-        // maxAPI.post(`Destin dict is ${key} with key ${dict[key]}`);
-        return dict[key];
-    }
+    return new Promise (function(resolve, reject) {
+        for (let key in dict) {
+            // maxAPI.post(`Destin dict is ${key} with key ${dict[key]}`);
+            resolve(dict[key]);
+        }
+    });
 }
 
-async function dict_dir_iterator(dict) {
+
+// var dict_dir_iterator = async function (dict) {
+    // dict = await maxAPI.getDict(dict);
+    // return new Promise(function (resolve, reject) {
+        // for (let key in dict) {
+            // maxAPI.post(`Destin dict is ${key} with key ${dict[key]}`);
+            // resolve(dict[key]);
+        // }
+    // });
+// }
+
+async function iterator(dict) {
     dict = await maxAPI.getDict(dict);
-    for (let key in dict) {
-        // maxAPI.post(`Destin dict is ${key} with key ${dict[key]}`);
-        return dict[key];
-    }
+        for (let key in dict) {
+            // maxAPI.post(`Destin dict is ${key} with key ${dict[key]}`);
+            return dict[key];
+        }
 }
 
 maxAPI.addHandlers({
@@ -256,11 +271,18 @@ maxAPI.addHandlers({
         maxAPI.post("~~~~~~~~");
         dict_list_iterator();
     },
-    dict_test: () => {
+    dict_test: async () => {
         // dict_dir_source_iterator();
         // dict_dir_destin_iterator();
-        dict_dir_iterator(dict_source_dir_max); // Source dir
-        dict_dir_iterator(dict_destin_dir_max); // Destination dir
+        // var dict_dir_destin = dict_dir_iterator().then(function(val) {
+            // maxAPI.post("Sourcey: " + val);
+        // }); // Source dir
+        // maxAPI.post("Dict destin: " + dict_dir_iterator(dict_source_dir_max));
+        // dict_dir_iterator(dict_destin_dir_max); // Destination dir
+        // await iterator(dict_destin_dir_max);
+        var hey = await iterator(dict_destin_dir_max);
+        maxAPI.post("Iter: " + hey);
+        maxAPI.outlet(hey);
     },
     // Choose source folder, and format
     max_source: (msg) => {
